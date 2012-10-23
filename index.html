@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/custom.css">
+        
+        <!--
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+        -->
+        
+        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">Pace Calculator</h1>
+                <nav>
+                    <ul>
+                    <!--
+                        <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">nav ul li a</a></li>
+                        -->
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+          <div class="main wrapper clearfix">
+            <article>
+              <fieldset>
+                  <label for="distance">
+                      Distance (meter)
+                  </label>
+                  <input id="distance" type="number" name="slider" value="5000" min="100" max="50000" data-highlight="false" />
+              </fieldset>
+              
+              <fieldset>
+                  <label for="timeMin">Time (hours:min:sec)</label>
+                  <input id="timeHour" class="time hour" name="timeHour" placeholder="0" value="" type="number" min="0" max="24" />:
+                  <input id="timeMin" class="time min" name="timeMin" placeholder="30" value="23" type="number" min="0" max="59" />:
+                  <input id="timeSec" class="time sec" name="timeSec" placeholder="00" value="52" type="number" min="0" max0"59" />
+              </fieldset>
+              
+              <fieldset>
+                  <label for="paceMin">Pace (min:sec)</label>
+                  <input id="paceMin" class="time min" name="paceMin" placeholder="?" value="" type="number" />:
+                  <input id="paceSec" class="time sec" name="paceSec" placeholder="??" value="" type="number" />
+              </fieldset>
+            </article>
+          <!--
+          <fieldset>
+            <label>Time (min:sec)</label>
+            <input id="timeMin" type="number" placeholder="32" maxlength="2" min="0" max="59"/>
+            <input id="timeSec" type="number" placeholder="10" maxlength="2" max="59" min="0" />
+          </fieldset>
+                
+          <fieldset>
+            <label>Pace (min:sec)</label>
+            <input id="paceMin" type="number" placeholder="?" maxlength="2" min="0" max="59"/>
+            <input id="paceSec" type="number" placeholder="?" maxlength="2" max="59" min="0" />
+          </fieldset>
+
+          <div data-role="collapsible-set">
+              <div data-role="collapsible" data-collapsed="true">
+                  <h3>
+                      Settings
+                  </h3>
+                  <div data-role="fieldcontain">
+                      <fieldset data-role="controlgroup" data-type="horizontal">
+                          <legend>
+                              Distance Unit
+                          </legend>
+                          <input id="radio1" name="unit" value="meter" type="radio" />
+                          <label for="radio1">
+                              Meter
+                          </label>
+                          <input id="radio2" name="unit" value="mile" type="radio" />
+                          <label for="radio2">
+                              Mile
+                          </label>
+                      </fieldset>
+                  </div>
+              </div>
+          </div>
+  
+  <!--
+  <div data-role="page" id="page1">
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-mini="true">
+                        <label for="distance">
+                            Distance
+                        </label>
+                        <input id="distance" type="range" name="slider" value="5000" min="100" max="50000" data-highlight="false" />
+                    </fieldset>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                    </div>
+                    <div class="ui-block-b">
+                        <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup">
+                                <label for="min">
+                                </label>
+                                <input name="" id="min" placeholder="30" value="" type="number" />
+                            </fieldset>
+                        </div>
+                        <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup">
+                                <label for="sec">
+                                </label>
+                                <input name="" id="sec" placeholder="00" value="" type="number" />
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                    </div>
+                    <div class="ui-block-b">
+                        <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup">
+                                <label for="paceMin">
+                                </label>
+                                <input name="" id="paceMin" placeholder="?" value="" type="text" />
+                            </fieldset>
+                        </div>
+                        <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup">
+                                <label for="paceSec">
+                                </label>
+                                <input name="" id="paceSec" placeholder="??" value="" type="text" />
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div data-role="collapsible-set">
+                    <div data-role="collapsible" data-collapsed="true">
+                        <h3>
+                            Settings
+                        </h3>
+                        <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup" data-type="horizontal">
+                                <legend>
+                                    Distance Unit
+                                </legend>
+                                <input id="radio1" name="unit" value="meter" type="radio" checked />
+                                <label for="radio1">
+                                    Meter
+                                </label>
+                                <input id="radio2" name="unit" value="mile" type="radio" />
+                                <label for="radio2">
+                                    Mile
+                                </label>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+-->
+                <aside>
+                    <h3>Description</h3>
+                    <p>Just fill in your values and it'll calculate your pace. If you change the pace it'll calculate the time.</p>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>Pace Calculator</h3>
+                <p>Made by Andreas Atteneder</p>
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <!--
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        -->
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        
+        <!--
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+        -->
+        
+    </body>
+</html>
