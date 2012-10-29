@@ -1,7 +1,25 @@
-.time {
-  width: 40px
-}
-
 .main article {
   padding:0px 0px 10px 0px
+}
+
+fieldset label img {
+	width: 10%;
+}
+
+input.distance,
+input.time {
+	color: white;
+	background-color: #2d2d2d;
+	border: none;
+	border-radius: 8px;
+	padding:5px;
+	font: 18px/26px 'Dosis', Helvetica, Helvetica Neue, Arial;
+}
+
+input.time {
+	max-width: 40px;
+}
+
+.updated {
+	background-color:#69c170;
 }

@@ -1,3 +1,6 @@
+//@codekit-prepend "plugins.js"
+//@codekit-prepend "vendor/jquery.color.js"
+
 (function(){
 "use strict";
 
@@ -33,6 +36,15 @@ function clampTime(input) {
   }
 }
 
+function pulsate(elem) {
+	elem
+		.stop()
+		.css("background-color", "#ff0")
+		.animate({
+			backgroundColor: "#fff"
+			}, 500 );
+}
+
 function updatePace() {
   //console.log("updatePace");
   undefinedPace = true;
@@ -46,6 +58,8 @@ function updatePace() {
   }
   $("#paceMin").val( paceMin );
   $("#paceSec").val(paceSec);
+  
+  pulsate($("fieldset.pace"));
 }
 
 function updateTime() {
@@ -71,6 +85,11 @@ function updateTime() {
   $("#timeHour").val( timeHour===0 ? "": timeHour );
   $("#timeMin").val( timeMin );
   $("#timeSec").val( time );
+  
+  $("fieldset").removeClass("updated");
+  $("fieldset.time").addClass("updated");
+
+  pulsate($("fieldset.time"));
 }
 
 function onTimeUpdate() {

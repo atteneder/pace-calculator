@@ -57,7 +57,7 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px 'Dosis', Helvetica, Helvetica Neue, Arial;
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
 }
 
 .wrapper {
@@ -117,18 +117,7 @@ body {
    Author's custom styles
    ========================================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
+@import "custom.scss";
 
 
 /* ==========================================================================
@@ -318,5 +307,3 @@ body {
         page-break-after: avoid;
     }
 }
-
-@import "custom.scss";

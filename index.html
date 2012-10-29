@@ -45,22 +45,24 @@
         <div class="main-container">
           <div class="main wrapper clearfix">
             <article>
-              <fieldset>
+              <fieldset class="distance">
                   <label for="distance">
-                      Distance (meter)
+                      <img src="img/iconDistance.png" alt="Distance (meter)" />
                   </label>
-                  <input id="distance" type="number" name="slider" value="5000" min="100" max="50000" data-highlight="false" />
+                  <input id="distance" class="distance" type="number" name="slider" value="5000" min="100" max="50000" data-highlight="false" />
               </fieldset>
               
-              <fieldset>
-                  <label for="timeMin">Time (hours:min:sec)</label>
+              <fieldset class="time">
+                  <label for="timeMin"><img src="img/iconTime.png" alt="Time (hours:min:sec)" /></label>
                   <input id="timeHour" class="time hour" name="timeHour" placeholder="0" value="" type="number" min="0" max="24" />:
                   <input id="timeMin" class="time min" name="timeMin" placeholder="30" value="23" type="number" min="0" max="59" />:
                   <input id="timeSec" class="time sec" name="timeSec" placeholder="00" value="52" type="number" min="0" max0"59" />
               </fieldset>
               
-              <fieldset>
-                  <label for="paceMin">Pace (min:sec)</label>
+              <fieldset class="pace">
+                  <label for="paceMin">
+                  	<img src="img/iconPace.png" alt="Pace (min:sec)" />
+                  </label>
                   <input id="paceMin" class="time min" name="paceMin" placeholder="?" value="" type="number" />:
                   <input id="paceSec" class="time sec" name="paceSec" placeholder="??" value="" type="number" />
               </fieldset>
@@ -87,8 +89,7 @@
         <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
         -->
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/main-ck.js"></script>
         
         <!--
         <script>
