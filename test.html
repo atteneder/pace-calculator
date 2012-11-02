@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Pace Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+        <link rel="stylesheet" href="css/main.css" media="screen">
+        
+        <link rel="icon" href="favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+        <link rel="apple-touch-icon" href="touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-144x144.png" />
+
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300' rel='stylesheet' type='text/css'>
+        <!--
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+        -->
+        
+        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div class="container blue">
+            <header class="row">
+  	          <div class="fourcol">&nbsp;</div>
+	            <div class="fourcol">
+	              <img alt="Pace Calculator logo" src="img/logo_header.gif" />
+	              <!--
+	              <h1 class="title">Pace Calculator</h1>
+	              -->
+	            </div>
+	            <div class="fourcol last">&nbsp;</div>
+            </header>
+        </div>
+
+        <div class="container">
+          <div class="row">
+          	<div class="fourcol">&nbsp;</div>
+          	<div class="fourcol main">
+	            <fieldset class="distance">
+		            <label for="distance">
+		              <img src="img/iconDistance.png" alt="Distance (meter)" />
+		            </label>
+		            <div class="right">
+			            <input id="distance" class="distance" type="number" name="slider" value="5000" min="100" max="50000" data-highlight="false" />
+		            </div>
+	            </fieldset>
+	            
+	            <fieldset class="time">
+		            <label for="timeMin"><img src="img/iconTime.png" alt="Time (hours:min:sec)" /></label>
+		            <div class="right">
+			            <input id="timeHour" class="time hour" name="timeHour" placeholder="0" value="" type="number" min="0" max="24" />:
+			            <input id="timeMin" class="time min" name="timeMin" placeholder="30" value="23" type="number" min="0" max="59" />:
+			            <input id="timeSec" class="time sec" name="timeSec" placeholder="00" value="52" type="number" min="0" max0"59" />
+		            </div>
+	            </fieldset>
+	            
+	            <fieldset class="pace">
+	              <label for="paceMin">
+	              	<img src="img/iconPace.png" alt="Pace (min:sec)" />
+	              </label>
+	              <div class="right">
+		              <input id="paceMin" class="time min" name="paceMin" placeholder="?" value="" type="number" />:
+		              <input id="paceSec" class="time sec" name="paceSec" placeholder="??" value="" type="number" />
+	              </div>
+	            </fieldset>
+          	</div>
+
+            <aside class="fourcol last blue">
+              <h3>Description</h3>
+              <p>Just fill in your values and it'll calculate your pace. If you change the pace it'll calculate the time.</p>
+            </aside>
+            
+            </div> <!-- row -->
+        </div> <!-- container -->
+
+        <div class="container blue">
+          <footer class="row">
+          	<div class="fourcol">&nbsp;</div>
+          	<div class="fourcol">
+		          <h3>Pace Calculator</h3>
+		          <p>made by Andreas Atteneder</p>
+          	</div>
+          	<div class="fourcol last">&nbsp;</div>
+          </footer>
+        </div>
+        <!--
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        -->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <!--
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        -->
+        
+        <!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+        <script type="text/javascript" src="js/css3-mediaqueries-ck.js"></script>
+        
+        <script src="js/main-ck.js"></script>
+        
+        <!--
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+        -->
+    </body>
+</html>

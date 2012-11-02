@@ -37,11 +37,12 @@ function clampTime(input) {
 }
 
 function pulsate(elem) {
+	var oldcol = elem.css("background-color");
 	elem
 		.stop()
 		.css("background-color", "#ff0")
 		.animate({
-			backgroundColor: "#fff"
+			backgroundColor: oldcol
 			}, 500 );
 }
 
@@ -120,6 +121,10 @@ $(document).ready(function() {
 
   $("#paceMin").change(onPaceUpdate);
   $("#paceSec").change(onPaceUpdate);
+  
+  $("input[type=number]").click(function() {
+    $(this).select();
+  });
 });
 
 })();

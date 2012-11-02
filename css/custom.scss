@@ -1,25 +1,134 @@
+$background: #6ba0d9;
+
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+body {
+	
+}
+
+.blue {
+	background-color: $background;
+	color: white;
+}
+    
 .main article {
   padding:0px 0px 10px 0px
 }
 
+fieldset {
+	margin: 5px 0 10px 0;
+	background-color: #a7ee69;
+}
+
 fieldset label img {
-	width: 10%;
+	width: 20%;
+	margin: auto 0;
+}
+
+.right {
+	float:right;
 }
 
 input.distance,
 input.time {
 	color: white;
-	background-color: #2d2d2d;
+	background-color: #555;
 	border: none;
 	border-radius: 8px;
-	padding:5px;
-	font: 18px/26px 'Dosis', Helvetica, Helvetica Neue, Arial;
+	padding: 0 3px 0 5px;
+	font: 28px 'Dosis', Helvetica, Helvetica Neue, Arial;
+	text-align: right;
 }
 
 input.time {
-	max-width: 40px;
+	max-width: 2em;
 }
 
 .updated {
 	background-color:#69c170;
 }
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+	body {
+		
+	}
+
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*	.logo {
+		background: url(logo2x.jpg) no-repeat;
+		background-size: 212px 303px;
+	}*/
+
+}
+
+@media only screen and (min-width: 320px) {
+
+  /* Small screen, non-retina */
+
+}
+
+/*
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) { 
+
+  /* Small screen, retina, stuff to override above media query *
+
+}
+
+@media only screen and (min-width: 700px) {
+
+  /* Medium screen, non-retina *
+
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 700px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (                min-resolution: 192dpi) and (min-width: 700px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 700px) { 
+
+  /* Medium screen, retina, stuff to override above media query *
+
+}
+
+@media only screen and (min-width: 1300px) {
+
+  /* Large screen, non-retina *
+
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
+
+  /* Large screen, retina, stuff to override above media query *
+
+}
+*/
