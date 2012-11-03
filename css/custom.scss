@@ -12,44 +12,85 @@ body {
 	background-color: $background;
 	color: white;
 }
-    
-.main article {
-  padding:0px 0px 10px 0px
+
+header.row {
+	padding: 5px 0 8px 0;
+}
+
+.main.container .row > * {
+	margin-top: 10px;
 }
 
 fieldset {
-	margin: 5px 0 10px 0;
-	background-color: #a7ee69;
+	position: relative;
+	margin: 0 0 10px 0;
+/*	background-color: #a7ee69;*/
 }
 
 fieldset label img {
-	width: 20%;
-	margin: auto 0;
+	width: 15%;
 }
 
-.right {
+.inputsetContainer {
+	position: absolute;
+	top:50%;
+	left:22%;
+	width: 78%;
+	margin-top: -1.2em;
+}
+
+.inputset {	
+	color: white;
+	display: inline;
 	float:right;
+	background-color: #555;
+	border-radius: 8px;
+	font: 28px 'Dosis', Helvetica, Helvetica Neue, Arial;
+	padding: 0 5px;
+	margin:0;
+	min-width: 210px;
+}
+
+fieldset.pace .inputset {
+	min-width: 135px;
+}
+
+.inputset span {
+	display: inline;
+}
+
+.inputset span.unit {
+	font-size: 14px;
+	color: #999;
+}
+
+/* Turn of up/down spin buttons on number type input fields */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 input.distance,
 input.time {
 	color: white;
-	background-color: #555;
 	border: none;
-	border-radius: 8px;
-	padding: 0 3px 0 5px;
+	background:none;
+	padding: 0 3px;
 	font: 28px 'Dosis', Helvetica, Helvetica Neue, Arial;
 	text-align: right;
+	width: 100%;
+	max-width: 160px;
 }
 
 input.time {
-	max-width: 2em;
+	max-width: 1em;
 }
 
-.updated {
-	background-color:#69c170;
+.row aside > * {
+	margin: 0 20px;
 }
-
 /* ============================= */
 /* ! Layout for mobile version   */
 /* ============================= */

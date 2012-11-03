@@ -31,7 +31,7 @@ function clampTime(input) {
     input.val("0"+time);
   }
   else
-  if (time<0) {
+  if (time<=0) {
     input.val("00");
   }
 }
@@ -40,7 +40,7 @@ function pulsate(elem) {
 	var oldcol = elem.css("background-color");
 	elem
 		.stop()
-		.css("background-color", "#ff0")
+		.css("background-color", "#0f0")
 		.animate({
 			backgroundColor: oldcol
 			}, 500 );
@@ -54,13 +54,13 @@ function updatePace() {
   var pace = time*1000/distance;
   var paceMin = Math.floor(pace/60);
   var paceSec =  Math.round(pace-paceMin*60);
-  if (paceSec.length<1) {
+  if (String(paceSec).length<=1) {
     paceSec = "0"+paceSec;
   }
-  $("#paceMin").val( paceMin );
+  $("#paceMin").val(paceMin);
   $("#paceSec").val(paceSec);
   
-  pulsate($("fieldset.pace"));
+  pulsate($("fieldset.pace div.inputset"));
 }
 
 function updateTime() {
@@ -90,7 +90,7 @@ function updateTime() {
   $("fieldset").removeClass("updated");
   $("fieldset.time").addClass("updated");
 
-  pulsate($("fieldset.time"));
+  pulsate($("fieldset.time div.inputset"));
 }
 
 function onTimeUpdate() {
