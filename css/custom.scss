@@ -1,11 +1,27 @@
 $background: #6ba0d9;
-
+$footerHeight: 100px;
 /* ============================== */
 /* ! Layout for desktop version   */
 /* ============================== */
 
-body {
-	
+html,body {
+	height: 100%
+}
+
+div.mother {
+	min-height:100%;
+	position:relative;
+}
+
+p,h3 {
+	margin: .2em 0;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	height: $footerHeight;
+	width: 100%;
 }
 
 .blue {
@@ -17,8 +33,13 @@ header.row {
 	padding: 5px 0 8px 0;
 }
 
+.main.container {
+	padding-bottom: $footerHeight;
+}
+
 .main.container .row > * {
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 fieldset {
@@ -86,6 +107,10 @@ input.time {
 
 input.time {
 	max-width: 1em;
+}
+
+.row div.blue {
+	border-radius: 8px;
 }
 
 .row aside > * {
