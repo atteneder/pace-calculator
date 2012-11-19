@@ -51,16 +51,23 @@ function updatePace() {
   undefinedPace = true;
   var time = getTime();
   var distance = parseInt($("#distance").val(),10);
+  
   var pace = time*1000/distance;
   var paceMin = Math.floor(pace/60);
   var paceSec =  Math.round(pace-paceMin*60);
+  
+  var speed = (distance/1000) / (time/3600);
+  
   if (String(paceSec).length<=1) {
     paceSec = "0"+paceSec;
   }
   $("#paceMin").val(paceMin);
   $("#paceSec").val(paceSec);
   
+  $("#speed").val(speed);
+  
   pulsate($("fieldset.pace div.inputset"));
+  pulsate($("fieldset.speed div.inputset"));
 }
 
 function updateTime() {
@@ -125,6 +132,29 @@ $(document).ready(function() {
   $("input[type=number]").click(function() {
     $(this).select();
   });
+
+  // SVG workaround
+  $("img[data-src]").each(function(i, el) {
+		var me = $(el);
+		if(Modernizr.svg) {
+			me.attr("src", me.attr("data-src"));
+			me.next().remove();
+		} else
+		if(me.next().prop("tagName")==="NOSCRIPT") {
+			var code = me.next().text();
+			me.before(code);
+			me.next().remove();
+			me.remove();
+		}
+  });
+  
+  // android placeholder fix
+  $("input[type='number']").each(function(i, el) {
+    el.type = "text";
+    el.onfocus = function(){this.type="number";};
+    el.onblur = function(){this.type="text";};
+  });
+
 });
 
 })();

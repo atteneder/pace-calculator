@@ -7,34 +7,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
    width="100"
    height="100"
-   id="svg3188"
-   version="1.1"
-   inkscape:version="0.48.2 r9819"
-   sodipodi:docname="Neues Dokument 2">
+   id="svg3188">
   <defs
      id="defs3190" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="67.822195"
-     inkscape:cy="33.378363"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1090"
-     inkscape:window-height="974"
-     inkscape:window-x="129"
-     inkscape:window-y="126"
-     inkscape:window-maximized="0" />
   <metadata
      id="metadata3193">
     <rdf:RDF>
@@ -48,59 +26,50 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Ebene 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-952.36218)">
+     transform="translate(0,-952.36218)"
+     id="layer1">
     <g
-       style="display:inline"
+       transform="matrix(1.225728,0,0,1.225728,-265.73392,603.93643)"
        id="g3963"
-       transform="matrix(1.225728,0,0,1.225728,-265.73392,603.93643)">
+       style="display:inline">
       <rect
-         transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
-         ry="3.1973057"
-         rx="3.1973057"
-         y="32.394115"
-         x="367.74176"
-         height="30.61949"
          width="88.495598"
+         height="30.61949"
+         rx="3.1973057"
+         ry="3.1973057"
+         x="367.74176"
+         y="32.394115"
+         transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
          id="rect4445"
          style="fill:#efcf64;fill-opacity:1;stroke:none" />
       <path
-         inkscape:connector-curvature="0"
-         id="path4567"
          d="m 251.34285,301.44391 -4.49543,4.49543 1.86519,1.86519 4.49543,-4.49543 -1.86519,-1.86519 z"
+         id="path4567"
          style="fill:#ffffff;fill-opacity:1;stroke:none" />
       <path
-         inkscape:connector-curvature="0"
-         id="path4565"
          d="m 265.3459,315.44697 -4.49543,4.49543 1.85106,1.85106 4.49543,-4.49543 -1.85106,-1.85106 z"
+         id="path4565"
          style="fill:#ffffff;fill-opacity:1;stroke:none" />
       <path
-         inkscape:connector-curvature="0"
-         id="path4563"
          d="m 279.33483,329.43589 -4.49543,4.49543 1.85106,1.85106 4.49543,-4.49543 -1.85106,-1.85106 z"
+         id="path4563"
          style="fill:#ffffff;fill-opacity:1;stroke:none" />
       <path
-         id="path4561"
          d="m 244.29186,294.50597 -7.63032,7.63032 1.85106,1.85106 7.63032,-7.63032 -1.85106,-1.85106 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         inkscape:connector-curvature="0" />
+         id="path4561"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
       <path
-         id="path4559"
          d="m 258.29492,308.50903 -7.63033,7.63032 1.85106,1.85106 7.63033,-7.63032 -1.85106,-1.85106 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         inkscape:connector-curvature="0" />
+         id="path4559"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
       <path
-         id="path4557"
          d="m 272.28384,322.49795 -7.63032,7.63033 1.85106,1.85106 7.63032,-7.63033 -1.85106,-1.85106 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         inkscape:connector-curvature="0" />
+         id="path4557"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
       <path
-         id="rect4447"
          d="m 286.27277,336.48688 -7.63032,7.63032 1.85106,1.85106 7.63032,-7.63032 -1.85106,-1.85106 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         inkscape:connector-curvature="0" />
+         id="rect4447"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
     </g>
   </g>
 </svg>

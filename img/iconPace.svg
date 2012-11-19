@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="100"
+   height="100"
+   id="svg5308">
+  <defs
+     id="defs5310" />
+  <metadata
+     id="metadata5313">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer4"
+     style="display:inline">
+    <path
+       d="m 59.634304,12.953425 -10.743484,0 -20.560839,0 c -0.432335,0.01325 -0.823123,0.171767 -1.172248,0.47465 -0.349169,0.303025 -0.563292,0.669614 -0.642422,1.099801 L 15.693492,85.472083 c -0.05239,0.430275 0.05014,0.796918 0.306885,1.099835 0.256714,0.302931 0.599216,0.46115 1.027432,0.474657 l 18.986356,0 c 0.431434,-0.0072 0.820452,-0.15455 1.166949,-0.439922 0.346467,-0.285571 0.56236,-0.663751 0.647721,-1.13457 l 2.006126,-13.151504 c 0.07887,-0.430282 0.293337,-0.796919 0.642411,-1.099842 0.349126,-0.302917 0.739883,-0.461122 1.172238,-0.47465 l 9.169012,0 C 59.019913,70.537696 66.242663,67.712909 72.486954,62.271672 78.731089,56.830482 82.578849,50.023197 84.030191,41.849749 85.072469,33.676389 83.3014,26.869104 78.717269,21.427832 74.13298,15.98667 67.772012,13.161876 59.634304,12.953425 z m -5.439156,35.657311 -9.169011,0 C 44.59786,48.597486 44.25542,48.438968 43.998704,48.136105 43.741967,47.833182 43.639661,47.466593 43.691829,47.036264 L 45.274137,36.66322 c 0.07235,-0.424445 0.273454,-0.779449 0.602366,-1.065087 0.329118,-0.285523 0.733196,-0.455306 1.212274,-0.509364 l 9.169011,0 c 1.890934,0.05028 3.364189,0.713956 4.419703,1.991219 1.055442,1.277377 1.461238,2.8673 1.217377,4.769761 -0.33656,1.902542 -1.227407,3.492458 -2.672528,4.769747 -1.445195,1.277385 -3.120939,1.941136 -5.027192,1.99124 z"
+       id="path5200"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#6ba0d9;fill-opacity:1;stroke:none;display:inline;font-family:FatFrank;-inkscape-font-specification:FatFrank" />
+  </g>
+</svg>

@@ -1,0 +1,97 @@
+{
+  "startedDateTime": "2012-10-29T23:31:07.806Z",
+  "time": 71,
+  "request": {
+    "method": "GET",
+    "url": "http://themes.googleusercontent.com/static/fonts/dosis/v1/GpmMKE0dnXylect5ObzLR3YhjbSpvc47ee6xR_80Hnw.woff",
+    "httpVersion": "HTTP/1.1",
+    "headers": [
+      {
+        "name": "Accept-Encoding",
+        "value": "gzip,deflate,sdch"
+      },
+      {
+        "name": "Accept-Language",
+        "value": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+      },
+      {
+        "name": "Connection",
+        "value": "keep-alive"
+      },
+      {
+        "name": "If-Modified-Since",
+        "value": "Tue, 20 Mar 2012 19:55:31 GMT"
+      },
+      {
+        "name": "Accept-Charset",
+        "value": "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
+      },
+      {
+        "name": "Host",
+        "value": "themes.googleusercontent.com"
+      },
+      {
+        "name": "User-Agent",
+        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.94 Safari/537.4"
+      },
+      {
+        "name": "Accept",
+        "value": "*/*"
+      },
+      {
+        "name": "Cache-Control",
+        "value": "max-age=0"
+      },
+      {
+        "name": "Referer",
+        "value": "http://localhost/pace-calculator/index.html"
+      }
+    ],
+    "queryString": [],
+    "cookies": [],
+    "headersSize": 560,
+    "bodySize": 0
+  },
+  "response": {
+    "status": 304,
+    "statusText": "Not Modified",
+    "httpVersion": "HTTP/1.1",
+    "headers": [
+      {
+        "name": "Date",
+        "value": "Fri, 26 Oct 2012 08:38:19 GMT"
+      },
+      {
+        "name": "Age",
+        "value": "312768"
+      },
+      {
+        "name": "Server",
+        "value": "GFE/2.0"
+      },
+      {
+        "name": "Expires",
+        "value": "Sat, 26 Oct 2013 08:38:19 GMT"
+      }
+    ],
+    "cookies": [],
+    "content": {
+      "size": 31176,
+      "mimeType": "font/woff"
+    },
+    "redirectURL": "",
+    "headersSize": 136,
+    "bodySize": 0
+  },
+  "cache": {},
+  "timings": {
+    "blocked": 0,
+    "dns": 13,
+    "connect": 25,
+    "send": 0,
+    "wait": 29,
+    "receive": 2,
+    "ssl": -1
+  },
+  "pageref": "page_1"
+}
