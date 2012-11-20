@@ -6,6 +6,10 @@
 
 var undefinedPace = true;
 
+function getDistance() {
+	return parseInt($("#distance").val(),10);
+}
+
 function getTime() {
   var time = parseInt($("#timeHour").val(),10) * 3600;
   if(isNaN(time)) {
@@ -22,6 +26,10 @@ function getPace() {
   return pace;
 }
 
+function getSpeed() {
+	return parseFloat($("#speed").val());
+}
+
 function clampTime(input) {
   var time = parseInt(input.val(),10);
   if (time>59) {
@@ -36,6 +44,11 @@ function clampTime(input) {
   }
 }
 
+function clampSpeed(input) {
+	var speed = parseFloat(input.val());
+	input.val(speed.toFixed(3));
+}
+
 function pulsate(elem) {
 	var oldcol = elem.css("background-color");
 	elem
@@ -46,35 +59,49 @@ function pulsate(elem) {
 			}, 500 );
 }
 
-function updatePace() {
-  //console.log("updatePace");
-  undefinedPace = true;
-  var time = getTime();
-  var distance = parseInt($("#distance").val(),10);
-  
-  var pace = time*1000/distance;
-  var paceMin = Math.floor(pace/60);
+function setPace(pace) {
+	var paceMin = Math.floor(pace/60);
   var paceSec =  Math.round(pace-paceMin*60);
-  
-  var speed = (distance/1000) / (time/3600);
   
   if (String(paceSec).length<=1) {
     paceSec = "0"+paceSec;
   }
+  
   $("#paceMin").val(paceMin);
   $("#paceSec").val(paceSec);
   
-  $("#speed").val(speed);
-  
   pulsate($("fieldset.pace div.inputset"));
-  pulsate($("fieldset.speed div.inputset"));
+}
+
+function updatePace() {
+  //console.log("updatePace");
+  undefinedPace = true;
+  var time = getTime();
+  var distance = getDistance();
+  
+  setPace(time*1000/distance);
+}
+
+function updatePaceFromSpeed() {
+	undefinedPace = true;
+	var speed = getSpeed();
+	setPace(3600/speed);
+}
+
+function updateSpeed() {
+	var time = getTime();
+	var distance = getDistance();
+	var speed = (distance/1000) / (time/3600);
+	$("#speed").val(speed.toFixed(3));
+	pulsate($("fieldset.speed div.inputset"));
 }
 
 function updateTime() {
   //console.log("updateTime");
   undefinedPace = false;
   var pace = getPace();
-  var distance = parseInt($("#distance").val(), 10);
+  var distance = getDistance();
+  
   var time = distance*pace/1000;
   var timeHour = Math.floor(time/3600);
   time -= timeHour*3600;
@@ -93,10 +120,10 @@ function updateTime() {
   $("#timeHour").val( timeHour===0 ? "": timeHour );
   $("#timeMin").val( timeMin );
   $("#timeSec").val( time );
-  
+  /*
   $("fieldset").removeClass("updated");
   $("fieldset.time").addClass("updated");
-
+  */
   pulsate($("fieldset.time div.inputset"));
 }
 
@@ -104,16 +131,25 @@ function onTimeUpdate() {
   clampTime( $("#timeSec") );
   clampTime( $("#timeMin") );
   updatePace();
+  updateSpeed();
 }
 
 function onPaceUpdate() {
   clampTime( $("#paceSec") );
   updateTime();
+  updateSpeed();
+}
+
+function onSpeedUpdate() {
+	clampSpeed($("#speed"));
+	updatePaceFromSpeed();
+	updateTime();
 }
 
 function updateDistance() {
   if( undefinedPace ) {
     updatePace();
+    updateSpeed();
   } else {
     updateTime();
   }
@@ -129,32 +165,28 @@ $(document).ready(function() {
   $("#paceMin").change(onPaceUpdate);
   $("#paceSec").change(onPaceUpdate);
   
+  $("#speed").change(onSpeedUpdate);
+  
   $("input[type=number]").click(function() {
     $(this).select();
   });
 
   // SVG workaround
-  $("img[data-src]").each(function(i, el) {
-		var me = $(el);
-		if(Modernizr.svg) {
-			me.attr("src", me.attr("data-src"));
-			me.next().remove();
-		} else
-		if(me.next().prop("tagName")==="NOSCRIPT") {
-			var code = me.next().text();
-			me.before(code);
-			me.next().remove();
-			me.remove();
-		}
-  });
-  
-  // android placeholder fix
+  if(!Modernizr.svg) {
+		$('img[src*="svg"]').attr('src', function () {
+			return $(this).attr('src').replace('.svg', '.png');
+		});
+	}
+	
+  // android placeholder on input type number fix
   $("input[type='number']").each(function(i, el) {
     el.type = "text";
     el.onfocus = function(){this.type="number";};
     el.onblur = function(){this.type="text";};
   });
 
+  updatePace();
+  updateSpeed();
 });
 
 })();
