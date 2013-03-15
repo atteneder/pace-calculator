@@ -1,8 +1,18 @@
 $background: #6ba0d9;
+$inputBackground: #555;
 $footerHeight: 100px;
 /* ============================== */
 /* ! Layout for desktop version   */
 /* ============================== */
+
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/dosis.eot');
+  src: url('../fonts/dosis.ttf') format('truetype');
+  src: local('Dosis Light'), local('Dosis-Light'), url(../fonts/dosis.woff) format('woff');
+}
 
 html,body {
 	height: 100%
@@ -44,8 +54,17 @@ header.row {
 
 fieldset {
 	position: relative;
-	margin: 0 0 10px 0;
-/*	background-color: #a7ee69;*/
+	margin: 0;
+	padding: 5px;
+	background: #eee;
+}
+
+fieldset:nth-child(even) {
+	background: none;
+}
+
+fieldset.last {
+	border-bottom: none;
 }
 
 fieldset label img {
@@ -56,7 +75,7 @@ fieldset label img {
 	position: absolute;
 	top:50%;
 	left:22%;
-	width: 78%;
+	width: 75%;
 	margin-top: -1.2em;
 }
 
@@ -64,15 +83,16 @@ fieldset label img {
 	color: white;
 	display: inline;
 	float:right;
-	background-color: #555;
+	background-color: $inputBackground;
 	border-radius: 8px;
 	font: 28px 'Dosis', Helvetica, Helvetica Neue, Arial;
 	padding: 0 5px;
 	margin:0;
-	min-width: 210px;
+	min-width: 215px;
 }
 
-fieldset.pace .inputset {
+fieldset.pace .inputset,
+fieldset.speed .inputset {
 	min-width: 135px;
 }
 
@@ -107,7 +127,11 @@ input.speed {
 }
 
 input.time {
-	max-width: 1em;
+	max-width: 1.05em;
+}
+
+input.speed {
+	max-width: 3.4em;
 }
 
 .row div.blue {
@@ -117,10 +141,24 @@ input.time {
 .row aside > * {
 	margin: 0 20px;
 }
+
+footer img.logo {
+	width: 150px;
+}
+
+@media
+handheld,
+only screen and (max-width: 610px) {
+	fieldset label img {
+		width: 15%;
+	}
+}
+
 /* ============================= */
 /* ! Layout for mobile version   */
 /* ============================= */
 
+/*
 @media handheld, only screen and (max-width: 767px) {
 
 	body {
@@ -128,27 +166,28 @@ input.time {
 	}
 
 }
-
+*/
 
 /* ========================================== */
 /* ! Provide higher res assets for iPhone 4   */
 /* ========================================== */
 
-
+/*
 @media only screen and (-webkit-min-device-pixel-ratio: 2) { 
 
-/*	.logo {
+	.logo {
 		background: url(logo2x.jpg) no-repeat;
 		background-size: 212px 303px;
-	}*/
+	}
 
 }
 
 @media only screen and (min-width: 320px) {
 
-  /* Small screen, non-retina */
+  Small screen, non-retina
 
 }
+*/
 
 /*
 @media

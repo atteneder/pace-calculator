@@ -206,5 +206,12 @@ only screen and (max-width: 479px) {
 		padding-left: 0px;
 		padding-right: 0px;
 	}
+}
 
+@media
+handheld,
+only screen and (max-width: 400px) {
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, 	.row .tencol, .row .elevencol, .row .twelvecol {
+		padding: 5px 10px;
+	}
 }

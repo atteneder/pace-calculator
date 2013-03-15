@@ -6,6 +6,10 @@
 
 var undefinedPace = true;
 
+//var distanceColor = "#efcf64";
+var timeColor = "#8ad69b";
+var paceColor = "#6ba0d9";
+
 function getDistance() {
 	return parseInt($("#distance").val(),10);
 }
@@ -49,11 +53,11 @@ function clampSpeed(input) {
 	input.val(speed.toFixed(3));
 }
 
-function pulsate(elem) {
+function pulsate(elem,color) {
 	var oldcol = elem.css("background-color");
 	elem
 		.stop()
-		.css("background-color", "#0f0")
+		.css("background-color", color)
 		.animate({
 			backgroundColor: oldcol
 			}, 500 );
@@ -70,7 +74,7 @@ function setPace(pace) {
   $("#paceMin").val(paceMin);
   $("#paceSec").val(paceSec);
   
-  pulsate($("fieldset.pace div.inputset"));
+  pulsate($("fieldset.pace div.inputset"), paceColor);
 }
 
 function updatePace() {
@@ -93,7 +97,7 @@ function updateSpeed() {
 	var distance = getDistance();
 	var speed = (distance/1000) / (time/3600);
 	$("#speed").val(speed.toFixed(3));
-	pulsate($("fieldset.speed div.inputset"));
+	pulsate($("fieldset.speed div.inputset"),paceColor);
 }
 
 function updateTime() {
@@ -124,7 +128,7 @@ function updateTime() {
   $("fieldset").removeClass("updated");
   $("fieldset.time").addClass("updated");
   */
-  pulsate($("fieldset.time div.inputset"));
+  pulsate($("fieldset.time div.inputset"),timeColor);
 }
 
 function onTimeUpdate() {
